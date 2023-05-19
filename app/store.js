@@ -1,15 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import addUserData from "../slices/fetchUserData";
+import usersReducer from "./fetchUserData";
+import inputReducer from "./inputData"
+import tableReducer from "./tableData"
 
-const store = configureStore({
-reducer:{
-        user : addUserData
-},
-middleware: (getDefaultMiddleware) =>
-getDefaultMiddleware({
-  serializableCheck: false,
-}), 
 
+
+export default configureStore({
+    reducer : {
+        users:usersReducer,
+        input:inputReducer,
+        table:tableReducer
+    }
 })
-
-export default store

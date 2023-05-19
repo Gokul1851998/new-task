@@ -18,3 +18,22 @@ export const getData = async()=>{
         return [error.response]
     }
 }
+
+export const singleData = async(payload)=>{
+    try {
+        const response = await axios.get(`${demo}get-singleData/${payload}`)
+        return response.data
+    } catch (error) {
+        return [error.response]
+    }
+}
+
+export const inputValue = async(payload)=>{
+    try {
+        const response = await axios.post(`${demo}get-inputData`,(payload))
+        return response.data
+    } catch (error) {
+        return [error.response]
+    }
+}
+

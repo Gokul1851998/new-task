@@ -1,1 +1,1 @@
-export const demo ='https://bookmyscreen.onrender.com/'
+export const demo ='https://bookmyscreen.onrender.com/' 
