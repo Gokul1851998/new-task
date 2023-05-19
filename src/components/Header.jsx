@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { demoData } from '../apiInstance/apiInstance'
+import { toast } from 'react-hot-toast'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../../slices/fetchUserData';
 
-import { getProject } from '../apiInstance/apiUrl'
 
  function Header() {
   const [project,setProject] = useState('')
@@ -14,18 +17,9 @@ import { getProject } from '../apiInstance/apiUrl'
   const [action,setAction] = useState('')
   const [employeeCode,setEmployeeCode] = useState('')
   const [targetDate,setTargetDate] = useState('')
+  const dispatch = useDispatch( )
 
-  useEffect(()=>{
-     const fetchData=async()=>{
-      const response = await getProject()
-      console.log(response)
-     .catch(error => {
-        console.error(error,"errr");
-      });
-      
-     }
-     fetchData()
-  },[])
+
 
   const dataDetails={
     DocDate:date,
@@ -43,13 +37,16 @@ import { getProject } from '../apiInstance/apiUrl'
       }
     ]
   }
-    
-  const handleAction=(e)=>{
+   
+  
+  const handleAction=async(e)=>{
     try{
     e.preventDefault()
-    // axios.post(apiUrlpost,dataDetails).then((response)=>{
-    //   console.log(response);
-    // })  
+    const response = await demoData(dataDetails)
+    if(response.success){
+     toast.success(response.message)
+     dispatch(fetchData())
+    }
     }catch(err){
       console.log(err);
     }
@@ -57,7 +54,7 @@ import { getProject } from '../apiInstance/apiUrl'
 
   return (
     <div className="container">
-    <div className="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full flex justify-center items-center">
+    <div className="top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full flex justify-center items-center">
         <div className="relative w-full h-full max-w-2xl md:h-auto rounded" style={{backgroundColor:'#c9d1dd'}}>
         <form onSubmit={handleAction}>
     <div className='m-5'>

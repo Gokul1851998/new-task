@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
-import MainPage from '../public/page/mainPage'
+import { Toaster } from 'react-hot-toast'
+import MainPage from './pages/mainPage'
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
      <BrowserRouter>
+     <Toaster/>
      <Routes>
           <Route path='/' element={<MainPage/>} />
         </Routes>
