@@ -67,22 +67,22 @@ import { fetchData } from '../../slices/fetchUserData';
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project</label>
-              <input type="text" onChange={(e) => setProject(e.target.value)} id="company" className="input-field" required />
+              <input type="text" onChange={(e) => setProject(e.target.value)} id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project Details</label>
-              <input type="text" onChange={(e) => setProjectDetails(e.target.value)} id="company" className="input-field" required />
+              <input type="text" onChange={(e) => setProjectDetails(e.target.value)} id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
-              <input type="text" onChange={(e) => setLocation(e.target.value)} id="company" className="input-field" required />
+              <input type="text" onChange={(e) => setLocation(e.target.value)} id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date</label>
-              <input type="date" onChange={(e) => setDate(e.target.value)} id="company" className="input-field" required />
+              <input type="date" onChange={(e) => setDate(e.target.value)} id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
 
           </div>
@@ -96,17 +96,17 @@ import { fetchData } from '../../slices/fetchUserData';
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Observation/Findings</label>
-              <input type="text" onChange={(e) => setObservation(e.target.value)} id="company" className="input-field" required />
+              <input type="text" onChange={(e) => setObservation(e.target.value)} id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Risk Level</label>
-              <input type="text" id="company" onChange={(e) => setRisklevel(e.target.value)} className="input-field" required />
+              <input type="text" id="company" onChange={(e) => setRisklevel(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
 
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Action Required</label>
-              <input type="text" id="company" onChange={(e) => setActionRequire(e.target.value)} className="input-field" required />
+              <input type="text" id="company" onChange={(e) => setActionRequire(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
             </div>
       <div >
             <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Action By</label>
